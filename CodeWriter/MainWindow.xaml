@@ -1,0 +1,22 @@
+﻿<Window x:Class="CodeWriter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:pu="clr-namespace:Panuon.UI.Silver;assembly=Panuon.UI.Silver"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CodeWriter"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid MinHeight="400" >
+        <Button Height="30"
+            Content="數據源管理"
+            pu:ButtonHelper.ButtonStyle="Outline"
+            pu:ButtonHelper.CornerRadius="15" Margin="710,7,19,398" Click="Button_Click" MinHeight="28"/>
+        <TextBlock Text="數據源:" Margin="24,14,696,398" FontSize="14"/>
+        <ComboBox x:Name="sourceCombo" Height="30"
+              Width="200"
+              pu:ComboBoxHelper.Header="Select one : "
+              DisplayMemberPath="name" 
+              pu:ComboBoxHelper.ItemHeight="30" Margin="87,10,513,395"/>
+    </Grid>
+</Window>
